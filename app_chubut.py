@@ -83,7 +83,7 @@ if not df.empty:
             labels={'total ovinos': 'Cabezas Declaradas', 'departamento': 'Jurisdicción'}
         )
         fig_barras.update_layout(showlegend=False, margin=dict(l=0, r=0, t=30, b=0))
-        st.plotly_chart(fig_barras, use_container_width=True)
+        st.plotly_chart(fig_barras, width='stretch')
 
     with col_mapa:
         st.subheader("Geolocalización Logística")
@@ -98,7 +98,7 @@ if not df.empty:
                 map_style="carto-positron"
             )
             fig_mapa.update_layout(margin=dict(l=0, r=0, t=0, b=0))
-            st.plotly_chart(fig_mapa, use_container_width=True)
+            st.plotly_chart(fig_mapa, width='stretch')
         else:
             st.warning("Sin datos de coordenadas para la comarca seleccionada.")
 
